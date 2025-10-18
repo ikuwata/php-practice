@@ -143,5 +143,4 @@ function evaluateGrade($grades)
 }
 echo evaluateGrade('A');
 echo evaluateGrade('default');
-
 ?>
