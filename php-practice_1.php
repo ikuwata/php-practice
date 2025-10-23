@@ -23,15 +23,12 @@ var_dump($Message);
 // Q4 条件分岐-1 if文
 $device = 'mac';
 
-if ($device == 'windows') {
-    echo '使用OSは、windowsです。';
-} else {
-    if ($device == 'mac') {
-    echo '使用OSは、macです。';
- }else {
-    echo 'どちらでもありません。';
- }
+if ($device === 'windows' || $device === 'mac') {
+    $message = ($device === 'windows') ? '使用OSは、windowsです。' : '使用OSは、macです。';
+}else {
+    $message = 'どちらでもありません。';
 }
+echo $message;
 
 // Q5 条件分岐-2 三項演算子
 $age = 22;
