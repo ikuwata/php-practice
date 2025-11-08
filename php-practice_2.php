@@ -149,4 +149,44 @@ $date = new DateTime;
 $past = new DateTime('1992-04-25');
 $diff = $date->diff($past);
 echo 'あの日から' . $diff->days . '日経過しました。';
+
+
+//追加問題_1
+class Pokemon
+{
+    public $name;
+    public $selement;
+
+    public function __construct($Pokemonname,$Pokemonselement)
+    {
+        $this->name = $Pokemonname;
+        $this->selement = $Pokemonselement;
+    }
+
+    public function attack($skill) {
+        echo 'いけ、' .  $this->selement . 'ポケモン' . $this->name . '！！' . $skill . 'だ！！';
+    }
+}
+$Pokemon1 = new Pokemon('ピカチュウ','ネズミ');
+$Pokemon1->attack('10万ボルト');
+
+//追加問題_2
+class Employee
+{
+    public $employeeId;
+    public $employeeName;
+
+    public function __construct($Id,$Name)
+    {
+        $this->employeeId = $Id;
+        $this->employeeName = $Name;
+    }
+
+    public function checkIn() {
+        echo $this->employeeName . "が出勤しました。社員ID：" . $this->employeeId;
+    }
+}
+$employee = new Employee(1,"山田太郎");
+$employee->checkIn();
+//出力：（任意の社員名）が出勤しました。社員ID：（任意の社員ID）  
 ?>
